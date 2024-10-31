@@ -1,0 +1,10 @@
+section canvas {
+    background-color: lightcyan;
+}
+
+body {
+    background-image: url("../images/background.jpg");
+    background-position: bottom center;
+    background-color: green;
+    background-repeat: no-repeat; 
+}

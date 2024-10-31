@@ -4,20 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Media Exercise</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
   <div class="container">
     <!-- AUDIO HTML GOES HERE -->
-
+    <audio controls src="./assets/audio/piano.wav" muted loop></audio>
     <!-- VIDEO HTML GOES HERE -->
-
+    <video controls src="./assets/video/ocean.mp4" muted poster="./assets/images/poster.jpg"></video>
     <!-- IMAGE MAP HTML GOES HERE-->
-
+    <figure>
+      <img width="600" src="./assets/images/fruit_table.jpg" alt="fruit table" usemap="#table">
+      <map name="table">
+        <area shape="rect" coords="10,10,300,580" href="https://en.wikipedia.org/wiki/Lavandula" alt="Lavander FLowers">
+        <area shape="rect" coords="350,310,600,660" href="https://en.wikipedia.org/wiki/Orange_(fruit)" alt="Orange">
+        <area shape="circle" coords="435,205,85" href="https://en.wikipedia.org/wiki/Coffee" alt="Coffee">
+      </map>
+    </figure>
     <!-- CANVAS HTML GOES HERE -->
+     <section>
+     <h2>Canvas</h2>
+     <canvas id="newCanvas" width="500" height="500"></canvas>
+    </section>
   </div>
 
   <script>
-    /* CANVAS JAVASCRIPT GOES HERE */
+    const canvas = document.getElementById("newCanvas");
+    const context = canvas.getContext("2d");
+    context.strokeStyle = "red";
+    context.lineWidth = 5;
+    context.beginPath()
+    context.moveTo(100,100)
+    context.lineTo(400,100)
+    context.stroke()
+    
+    context.strokeStyle = "purple";
+    context.lineWidth = 5;
+    context.beginPath()
+    context.moveTo(400,100)
+    context.lineTo(400,400)
+    context.stroke()
+    
+    context.strokeStyle = "blue";
+    context.lineWidth = 5;
+    context.beginPath()
+    context.moveTo(400,400)
+    context.lineTo(100,400)
+    context.stroke()
+
+    context.strokeStyle = "pink";
+    context.lineWidth = 5;
+    context.beginPath()
+    context.moveTo(100,400)
+    context.lineTo(100,100)
+    context.stroke()
   </script>
 </body>
 </html>
